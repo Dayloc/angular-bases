@@ -3,24 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { CounterModule } from './counter/counter.module';
 import { HeroesModule } from './heroes/heroes.module';
-import { RepasoComponent } from './repaso/repa/repaso.component';
 import { AppComponent } from './app.component';
-import { Repaso2Component } from './repaso2/repaso2.component';
+import { RepasoModule } from './repaso/repaso.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RepasoComponent,
-    Repaso2Component
+
+
 
   ],
   imports: [
     BrowserModule,
     CounterModule,
     HeroesModule,
-  ],
+    RepasoModule  ],
   providers: [],
   bootstrap: [AppComponent]
 })
