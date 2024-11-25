@@ -5,3 +5,9 @@ export interface Character{
   power:number
 
 }
+
+
+export interface Frutas{
+  name:string;
+  color:string;
+}
