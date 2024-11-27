@@ -7,7 +7,3 @@ export interface Character{
 }
 
 
-export interface Frutas{
-  name:string;
-  color:string;
-}

@@ -9,10 +9,8 @@
 </div>
 
 <div class="col">
-  <dbz-agregar-personajes></dbz-agregar-personajes>
-  <div *ngFor="let item of frutas">
-    <p>{{ item.name }} - {{ item.color }}</p>
-  </div>
+  <dbz-agregar-personajes (onNewPersonaje)="onNewPersonaje($event)"></dbz-agregar-personajes>
+
 
 
 </div>

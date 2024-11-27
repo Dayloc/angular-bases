@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Character, Frutas } from '../../interfaces/character.interface';
+import { Character} from '../../interfaces/character.interface';
 
 @Component({
   selector: 'dbz-list',
@@ -19,7 +19,5 @@ export class ListComponent {
     {name: 'Gohan', power: 1000},
 
   ]
-  @Input()
-  public fruta:Frutas[]=[]
 
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Character, Frutas } from '../interfaces/character.interface';
+import { Character } from '../interfaces/character.interface';
 
 @Component({
   selector: 'app-dbz-main-page',
@@ -35,31 +35,12 @@ export class MainPageComponent  {
       }
 
     ];
-    public frutas:Frutas[]=[{
-      name: 'Manzana',
-      color: 'Rojo'
-      },
-      {name:'cereza',
-        color: 'Rojo'
-      },
-      {
-         name:'uva',
-        color: 'blanca'
-      },
-      {
-        name:'banana',
-        color: 'Amarillo'
-      },
-      {
-        name:'pera',
-        color: 'Verde'
-      },
 
+onNewPersonaje(newPersonaje:Character):void{
 
+  console.log(newPersonaje);
+  console.log('AgregarPersonajesComponent')
 
-
-
-  ]
-
+}
 
 }
