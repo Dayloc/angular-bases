@@ -1,5 +1,7 @@
+import { ListadoComponent } from './../components/listado/listado.component';
 import { Component } from '@angular/core';
 import { Paciente } from '../interfaces/paciente.interface';
+import { Character } from 'src/app/dbz/interfaces/character.interface';
 
 @Component({
   selector: 'main-page-paciente',
@@ -20,4 +22,9 @@ export class MainPageListadoPacienteComponent {
       age: 45,
     },
   ];
+  onNewPaciente(Paciente:Character):void{
+    console.log('ListadoComponent')
+    //console.log({Paciente});
+
+  }
 }

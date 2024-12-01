@@ -19,7 +19,7 @@ export class AgregarPersonajesComponent {
       if(this.newPersonaje.name.length=== 0)return;
 
       //esto es lo que envia al padre
-      this.onNewPersonaje.emit(this.newPersonaje);
+      this.onNewPersonaje.emit({...this.newPersonaje});
       console.log(this.newPersonaje)
       this.newPersonaje.name='' ;
      this.newPersonaje.power=0;}

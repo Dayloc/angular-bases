@@ -1,16 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainPageListadoPacienteComponent } from './pages/listado-page.component';
+import { FormsModule } from '@angular/forms';
 import { ListadoComponent } from './components/listado/listado.component';
-import { EnfermedadesComponent } from './components/enfermedades/enfermedades.component';
+
+
 
 @NgModule({
   declarations: [
-    MainPageListadoPacienteComponent,
-    ListadoComponent,
-    EnfermedadesComponent,
+            MainPageListadoPacienteComponent,
+            ListadoComponent
   ],
-  exports: [MainPageListadoPacienteComponent],
-  imports: [CommonModule],
+
+  exports:[MainPageListadoPacienteComponent],
+
+  imports: [
+    CommonModule,
+    FormsModule
+  ]
 })
-export class PacienteModule {}
+export class PacienteModule { }

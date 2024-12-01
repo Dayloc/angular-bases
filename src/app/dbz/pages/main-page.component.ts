@@ -40,6 +40,7 @@ onNewPersonaje(newPersonaje:Character):void{
 
   console.log(newPersonaje);
   console.log('AgregarPersonajesComponent')
+    this.characters.push(newPersonaje);
 
 }
 
