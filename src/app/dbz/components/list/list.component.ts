@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { Character} from '../../interfaces/character.interface';
+import { Component, Input, Output } from '@angular/core';
+import { Character } from '../../interfaces/character.interface';
 
 @Component({
   selector: 'dbz-list',
@@ -18,6 +18,21 @@ export class ListComponent {
     {name: 'Vegeta', power: 1000},
     {name: 'Gohan', power: 1000},
 
-  ]
+  ];
+  @Input()
+  @Output()
+
+  onDdeleteCharacter(index:number):void{
+    //TODO: Emitir Personaje
+    console.log(index)
+    for(let i=0;i<this.characterList.length;i++){
+      if(i===index){
+        this.characterList.splice(i,1)
+        break;
+      }
+
+    }
+
+  }
 
 }
