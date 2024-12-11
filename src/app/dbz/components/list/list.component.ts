@@ -1,5 +1,6 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
+import { DbzService } from '../../services/dbz.service';
 
 @Component({
   selector: 'dbz-list',
@@ -19,19 +20,21 @@ export class ListComponent {
     {name: 'Gohan', power: 1000},
 
   ];
-  @Input()
+
+
   @Output()
+ public onEventoEmitido: EventEmitter<number> =new EventEmitter();
 
   onDdeleteCharacter(index:number):void{
     //TODO: Emitir Personaje
+    this.onEventoEmitido.emit(index)
     console.log(index)
-    for(let i=0;i<this.characterList.length;i++){
-      if(i===index){
-        this.characterList.splice(i,1)
-        break;
-      }
 
-    }
+  }
+  constructor(public DbzService:DbzService){
+
+    console.log(DbzService.characters)
+
 
   }
 
