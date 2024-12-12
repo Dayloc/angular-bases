@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
 import { MainPageComponent } from '../../pages/main-page.component';
-
+import { v4 as uuid } from 'uuid';
 @Component({
   selector: 'dbz-agregar-personajes',
   templateUrl: './agregar-personajes.component.html',
@@ -13,7 +13,8 @@ export class AgregarPersonajesComponent {
 
     public  newPersonaje: Character = {
       name: '',
-      power: 0
+      power: 0,
+      id:uuid()
     }
     emitNewPersonaje(): void{
       if(this.newPersonaje.name.length=== 0)return;
