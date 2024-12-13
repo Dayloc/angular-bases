@@ -9,19 +9,19 @@ import { v4 as uuid } from 'uuid';
 })
 export class AgregarPersonajesComponent {
    @Output()
-  public onNewPersonaje: EventEmitter <Character>=new EventEmitter();
+  public onNewCharacter: EventEmitter <Character>=new EventEmitter();
 
-    public  newPersonaje: Character = {
+    public  newCharacter: Character = {
       name: '',
       power: 0,
       id:uuid()
     }
-    emitNewPersonaje(): void{
-      if(this.newPersonaje.name.length=== 0)return;
+    emitNewCharacter(): void{
+      if(this.newCharacter.name.length=== 0)return;
 
       //esto es lo que envia al padre
-      this.onNewPersonaje.emit({...this.newPersonaje});
-      console.log(this.newPersonaje)
-      this.newPersonaje.name='' ;
-     this.newPersonaje.power=0;}
+      this.onNewCharacter.emit({...this.newCharacter});
+      console.log(this.newCharacter)
+      this.newCharacter.name='' ;
+     this.newCharacter.power=0;}
 }

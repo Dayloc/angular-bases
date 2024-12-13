@@ -2,9 +2,9 @@
 <h1 class="text-bg-info">DBZ Personajes</h1>
 <hr>
 <div class="row">
-<div class="col">
-  <dbz-list [characterList]="dbzService.characters"
-              (onEventoEmitido)="dbzService.onDeleteCharacter($event)"
+<div class="col mb-4">
+  <dbz-list [characterList]="characters"
+              (onDelete)="onDeleteCharacter($event)"
 
   ></dbz-list>
 
@@ -12,7 +12,7 @@
 </div>
 
 <div class="col">
-  <dbz-agregar-personajes (onNewPersonaje)=" dbzService.onNewPersonaje($event)"></dbz-agregar-personajes>
+  <dbz-agregar-personajes (onNewCharacter)=" onNewCharacter($event)"></dbz-agregar-personajes>
 
 
 

@@ -39,21 +39,26 @@ export class DbzService {
 
   ];
 
-onNewPersonaje(personaje:Character):void{
-  const newPersonaje:Character={id:uuid(),...personaje}
+onNewCharacter(character:Character):void{
+  const newCharacter:Character={id:uuid(),...character}
 
 console.log('AgregarPersonajesComponent')
-  this.characters.push(newPersonaje);
-  console.log(newPersonaje);
+  this.characters.push(newCharacter);
+  console.log(newCharacter);
 
 }
 
-onDeleteCharacter(index:number):void{
+/* onDeleteCharacter(index:number):void{
 
 this.characters.splice(index,1);
 
-}
+} */
 
+public deleteById(id:string):void{
+
+  this.characters = this.characters.filter(character => character.id!== id);
+
+}
 
 
 }

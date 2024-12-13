@@ -23,19 +23,20 @@ export class ListComponent {
 
 
   @Output()
- public onEventoEmitido: EventEmitter<number> =new EventEmitter();
+ public onDelete: EventEmitter<string> =new EventEmitter();
+ constructor(public DbzService:DbzService){
 
-  onDdeleteCharacter(index:number):void{
-    //TODO: Emitir Personaje
-    this.onEventoEmitido.emit(index)
-    console.log(index)
+  console.log(DbzService.characters)
+
+
+}
+  onDdeleteCharacter(id:string):void{
+    //TODO: Emitir id del  Personaje
+    this.onDelete.emit(id)
+    console.log(id)
 
   }
-  constructor(public DbzService:DbzService){
-
-    console.log(DbzService.characters)
 
 
-  }
 
 }
