@@ -23,6 +23,7 @@ export class ListComponent {
 
 
   @Output()
+  //este es el metodo que se llama debajo para enviar el id
  public onDelete: EventEmitter<string> =new EventEmitter();
  constructor(public DbzService:DbzService){
 
@@ -31,7 +32,7 @@ export class ListComponent {
 
 }
   onDdeleteCharacter(id:string):void{
-    //TODO: Emitir id del  Personaje
+    //Emitir id del  Personaje
     this.onDelete.emit(id)
     console.log(id)
 
